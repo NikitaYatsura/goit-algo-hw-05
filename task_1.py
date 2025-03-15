@@ -17,8 +17,3 @@ def caching_fibonachi() -> Callable[[int], int]:
             return cache[number]
     return fibonachi
 
-number_fibonachi = caching_fibonachi()
-
-print(number_fibonachi(10))
-print(number_fibonachi(1000))
-print(number_fibonachi(1000))
