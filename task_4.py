@@ -13,8 +13,11 @@ def input_error(func):
     return inner
 
 # func for input
+@input_error
 def parse_input(input_str):
-    return input_str.lower().split() 
+    cmd, *args = input_str.split()
+    cmd = cmd.strip().lower()
+    return cmd, *args 
 
 #func for add the contact to the dict
 @input_error
